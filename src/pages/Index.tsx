@@ -72,7 +72,13 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="mt-12 md:mt-16">
+          <div className="mt-12 md:mt-16 flex justify-center">
+            <div className="bg-gradient-to-br from-orange-400 to-orange-500 p-6 rounded-2xl shadow-2xl w-32 h-32 flex items-center justify-center">
+              <div className="text-white text-5xl font-bold">КП</div>
+            </div>
+          </div>
+          
+          <div className="mt-12">
             <button 
               onClick={() => scrollToSlide(1)}
               className="animate-float bg-white text-primary px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all flex items-center gap-2 mx-auto"
@@ -269,19 +275,54 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="p-6 bg-white shadow-xl border-2 border-primary/20 overflow-hidden">
-              <img 
-                src="https://cdn.poehali.dev/files/ed82c750-fb82-4e51-8461-a87508d5429e.jpg" 
-                alt="Концепция дизайна" 
-                className="w-full rounded-lg mb-4"
-              />
-              <div className="flex items-center gap-2 text-sm text-foreground/70">
-                <Icon name="Layout" size={16} />
-                <span>Общая концепция и элементы</span>
+          <div className="grid lg:grid-cols-3 gap-6 mb-8">
+            <Card className="p-6 bg-white shadow-xl border-2 border-primary/20">
+              <div className="bg-gradient-to-br from-purple-100 to-pink-50 rounded-2xl p-6 mb-4 aspect-[9/16] flex flex-col items-center justify-center">
+                <div className="text-6xl mb-4">👋</div>
+                <h4 className="font-semibold text-lg text-center mb-2">Добро пожаловать</h4>
+                <p className="text-sm text-center text-foreground/70">Загрузочный экран</p>
               </div>
+              <div className="text-center text-sm text-foreground/70">Приветственное окно</div>
             </Card>
 
+            <Card className="p-6 bg-white shadow-xl border-2 border-primary/20">
+              <div className="bg-gradient-to-br from-purple-100 to-pink-50 rounded-2xl p-6 mb-4 aspect-[9/16] flex flex-col items-center justify-center gap-4">
+                <Icon name="Heart" size={64} className="text-primary" />
+                <h4 className="font-semibold text-lg text-center">Слушаем и Поддерживаем</h4>
+                <p className="text-sm text-center text-foreground/70 px-4">
+                  Ваш персональный помощник в работе с эмоциями
+                </p>
+                <div className="flex gap-2 mt-4">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary/50"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary/30"></div>
+                </div>
+              </div>
+              <div className="text-center text-sm text-foreground/70">Приветственное окно</div>
+            </Card>
+
+            <Card className="p-6 bg-white shadow-xl border-2 border-primary/20">
+              <div className="bg-gradient-to-br from-purple-100 to-pink-50 rounded-2xl p-6 mb-4 aspect-[9/16] flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-center mb-4">
+                    <Icon name="UserPlus" size={48} className="text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-lg text-center mb-4">Регистрация</h4>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-white/60 rounded-lg p-3 text-sm">Имя</div>
+                  <div className="bg-white/60 rounded-lg p-3 text-sm">Email</div>
+                  <div className="bg-white/60 rounded-lg p-3 text-sm">Пароль</div>
+                  <div className="bg-primary text-white rounded-lg p-3 text-center font-semibold">
+                    Создать аккаунт
+                  </div>
+                </div>
+              </div>
+              <div className="text-center text-sm text-foreground/70">Регистрация</div>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card className="p-6 bg-white shadow-xl border-2 border-primary/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-primary text-white p-2 rounded-lg">
@@ -298,23 +339,48 @@ const Index = () => {
                   { icon: 'User', text: 'Профиль пользователя', color: '#FCDACA' }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3 p-3 rounded-lg hover:bg-purple-50 transition-all">
-                    <div className="flex items-center justify-center w-8 h-8 rounded-lg" style={{ backgroundColor: item.color }}>
-                      <Icon name={item.icon as any} className="text-white" size={16} />
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg" style={{ backgroundColor: item.color }}>
+                      <Icon name={item.icon as any} className="text-white" size={20} />
                     </div>
-                    <span className="text-sm font-medium">{item.text}</span>
+                    <div className="flex-1">
+                      <span className="text-sm font-medium">{item.text}</span>
+                    </div>
+                    {idx < 4 && <Icon name="ChevronRight" size={16} className="text-foreground/30" />}
                   </div>
                 ))}
               </div>
             </Card>
-          </div>
 
-          <Card className="p-6 bg-white shadow-xl border-2 border-primary/20 mb-8">
-            <img 
-              src="https://cdn.poehali.dev/files/0a8d81e1-abac-4866-bce8-bd6feb6ed905.jpg" 
-              alt="Экраны приложения" 
-              className="w-full rounded-lg"
-            />
-          </Card>
+            <Card className="p-6 bg-white shadow-xl border-2 border-primary/20">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-secondary text-primary p-2 rounded-lg">
+                  <Icon name="Layout" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-primary">Элементы логотипа</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="bg-gradient-to-br from-purple-100 to-pink-50 rounded-xl p-6 text-center">
+                  <div className="flex justify-center mb-3">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                      <Icon name="Heart" size={36} className="text-white" />
+                    </div>
+                  </div>
+                  <p className="text-sm font-semibold text-primary">Основной логотип</p>
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="aspect-square rounded-xl flex items-center justify-center" style={{ backgroundColor: '#FCDACA' }}>
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <div className="aspect-square rounded-xl flex items-center justify-center" style={{ backgroundColor: '#710094' }}>
+                    <Icon name="Sparkles" className="text-white" size={28} />
+                  </div>
+                  <div className="aspect-square rounded-xl flex items-center justify-center" style={{ backgroundColor: '#C1B5F3' }}>
+                    <span className="text-2xl">💜</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
 
           <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 shadow-xl">
             <h3 className="text-xl md:text-2xl font-semibold text-primary mb-6 text-center">
@@ -326,21 +392,21 @@ const Index = () => {
                   <Icon name="Palette" className="text-primary" size={36} />
                 </div>
                 <h4 className="font-semibold text-base md:text-lg mb-2">Гармоничные цвета</h4>
-                <p className="text-sm text-foreground/70">Успокаивающая палитра</p>
+                <p className="text-sm text-foreground/70">Успокаивающая палитра для комфортного использования</p>
               </div>
               <div className="text-center">
                 <div className="bg-white p-5 rounded-2xl shadow-lg mb-4 mx-auto w-fit hover-scale">
                   <Icon name="Minimize2" className="text-primary" size={36} />
                 </div>
                 <h4 className="font-semibold text-base md:text-lg mb-2">Минимализм</h4>
-                <p className="text-sm text-foreground/70">Интуитивный интерфейс</p>
+                <p className="text-sm text-foreground/70">Интуитивный интерфейс без лишних элементов</p>
               </div>
               <div className="text-center">
                 <div className="bg-white p-5 rounded-2xl shadow-lg mb-4 mx-auto w-fit hover-scale">
                   <Icon name="Smile" className="text-primary" size={36} />
                 </div>
                 <h4 className="font-semibold text-base md:text-lg mb-2">Эмпатия</h4>
-                <p className="text-sm text-foreground/70">Дружелюбный дизайн</p>
+                <p className="text-sm text-foreground/70">Дружелюбные иллюстрации и тёплые тона</p>
               </div>
             </div>
           </Card>
