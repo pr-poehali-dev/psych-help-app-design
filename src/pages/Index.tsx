@@ -703,6 +703,88 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <section className="slide-section bg-gradient-to-br from-primary via-purple-600 to-secondary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-white rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto w-full relative z-10">
+          <div className="text-center animate-slide-up">
+            <div className="mb-8 inline-block">
+              <div className="w-32 h-32 mx-auto mb-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl hover-scale border-4 border-white/30">
+                <Icon name="Heart" className="text-white" size={64} />
+              </div>
+            </div>
+
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              Спасибо за внимание!
+            </h1>
+
+            <div className="space-y-6 mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <p className="text-2xl md:text-3xl text-white/90 font-medium">
+                Готова ответить на ваши вопросы
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 text-white/80 text-lg">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+                  <Icon name="User" size={20} />
+                  <span>Шумова Дарья</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+                  <Icon name="GraduationCap" size={20} />
+                  <span>ДС 22-21</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+                  <Icon name="Calendar" size={20} />
+                  <span>2024</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.6s' }}>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all hover-scale">
+                <Icon name="Lightbulb" className="text-white mx-auto mb-3" size={32} />
+                <p className="text-white font-semibold text-lg mb-1">Миссия</p>
+                <p className="text-white/70 text-sm">Психологическая помощь доступна всем</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all hover-scale">
+                <Icon name="Palette" className="text-white mx-auto mb-3" size={32} />
+                <p className="text-white font-semibold text-lg mb-1">Дизайн</p>
+                <p className="text-white/70 text-sm">Эмпатия и забота в каждом пикселе</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all hover-scale">
+                <Icon name="Rocket" className="text-white mx-auto mb-3" size={32} />
+                <p className="text-white font-semibold text-lg mb-1">Будущее</p>
+                <p className="text-white/70 text-sm">Технологии на службе здоровья</p>
+              </div>
+            </div>
+
+            <div className="mt-12 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+              <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full border-2 border-white/30 shadow-xl">
+                <div className="flex -space-x-2">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold border-2 border-white text-sm">
+                    💜
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-pink-400 flex items-center justify-center text-white font-bold border-2 border-white text-sm">
+                    🌸
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center text-white font-bold border-2 border-white text-sm">
+                    🧡
+                  </div>
+                </div>
+                <span className="text-white text-xl font-semibold">Слушаем и Поддерживаем</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-primary via-white to-secondary"></div>
+      </section>
     </div>
   );
 };
