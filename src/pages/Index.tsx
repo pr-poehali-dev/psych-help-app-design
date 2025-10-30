@@ -739,7 +739,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
                   <Icon name="Calendar" size={20} />
-                  <span>2024</span>
+                  <span>2025</span>
                 </div>
               </div>
             </div>
