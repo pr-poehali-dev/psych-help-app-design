@@ -27,7 +27,7 @@ const Index = () => {
   return (
     <div className="relative">
       <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
-        {[0, 1, 2, 3].map((index) => (
+        {[0, 1, 2, 3, 4].map((index) => (
           <button
             key={index}
             onClick={() => scrollToSlide(index)}
@@ -410,6 +410,297 @@ const Index = () => {
               </div>
             </div>
           </Card>
+        </div>
+      </section>
+
+      <section className="slide-section bg-gradient-to-br from-white via-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="text-center mb-12 animate-slide-up">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+              <Icon name="Network" className="text-primary" size={20} />
+              <span className="text-primary font-semibold text-sm">Mind Map</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+              Карта ассоциаций
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+              Структура проекта и связь ключевых элементов
+            </p>
+          </div>
+
+          <div className="relative min-h-[600px] bg-white/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border-2 border-primary/20 shadow-2xl overflow-hidden">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+            </div>
+
+            <div className="relative z-10">
+              <div className="flex flex-col items-center">
+                <div className="bg-gradient-to-br from-primary to-primary/80 text-white px-8 py-6 rounded-3xl shadow-2xl hover-scale mb-12 relative">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                    🎯
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-center">
+                    Слушаем и Поддерживаем
+                  </h3>
+                  <p className="text-white/80 text-center mt-2 text-sm">Центральная концепция</p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8 w-full mb-12">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-1 h-12 bg-gradient-to-b from-primary to-transparent rounded-full"></div>
+                      <h4 className="text-lg font-bold text-primary">Эмоции</h4>
+                    </div>
+                    
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-purple-200 hover:border-primary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                          <span className="text-xl">😊</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Радость</p>
+                          <p className="text-xs text-foreground/60">Позитивные переживания</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-purple-200 hover:border-primary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                          <span className="text-xl">😢</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Грусть</p>
+                          <p className="text-xs text-foreground/60">Принятие эмоций</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-purple-200 hover:border-primary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                          <span className="text-xl">😰</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Тревога</p>
+                          <p className="text-xs text-foreground/60">Работа со страхами</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-purple-200 hover:border-primary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                          <span className="text-xl">😠</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Злость</p>
+                          <p className="text-xs text-foreground/60">Экологичное выражение</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-1 h-12 bg-gradient-to-b from-secondary to-transparent rounded-full"></div>
+                      <h4 className="text-lg font-bold text-primary">Инструменты</h4>
+                    </div>
+                    
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-pink-200 hover:border-secondary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+                          <Icon name="BookOpen" className="text-primary" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Дневник настроения</p>
+                          <p className="text-xs text-foreground/60">Отслеживание эмоций</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-pink-200 hover:border-secondary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary/20 to-secondary/40 flex items-center justify-center">
+                          <Icon name="Wind" className="text-primary" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Дыхательные практики</p>
+                          <p className="text-xs text-foreground/60">Снижение стресса</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-pink-200 hover:border-secondary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
+                          <Icon name="Headphones" className="text-primary" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Медитации</p>
+                          <p className="text-xs text-foreground/60">Осознанность</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-pink-200 hover:border-secondary transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center">
+                          <Icon name="MessageCircle" className="text-primary" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Поддержка психолога</p>
+                          <p className="text-xs text-foreground/60">Профессиональная помощь</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-1 h-12 bg-gradient-to-b from-orange-500 to-transparent rounded-full"></div>
+                      <h4 className="text-lg font-bold text-primary">Ценности</h4>
+                    </div>
+                    
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                          <Icon name="ShieldCheck" className="text-orange-600" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Анонимность</p>
+                          <p className="text-xs text-foreground/60">Защита данных</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
+                          <Icon name="Heart" className="text-orange-600" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Эмпатия</p>
+                          <p className="text-xs text-foreground/60">Понимание и забота</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-300 to-orange-400 flex items-center justify-center">
+                          <Icon name="Zap" className="text-white" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Доступность</p>
+                          <p className="text-xs text-foreground/60">24/7 в любой точке</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <Card className="p-4 bg-white/90 backdrop-blur-sm border-2 border-orange-200 hover:border-orange-400 transition-all hover-scale">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center">
+                          <Icon name="TrendingUp" className="text-white" size={20} />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm">Прогресс</p>
+                          <p className="text-xs text-foreground/60">Отслеживание динамики</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+                  <Card className="p-6 bg-gradient-to-br from-purple-50 to-white border-2 border-primary/20 hover:border-primary/50 transition-all hover-scale text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg">
+                      <Icon name="Users" className="text-white" size={28} />
+                    </div>
+                    <h5 className="font-bold text-primary mb-2">Целевая аудитория</h5>
+                    <p className="text-xs text-foreground/70">Молодежь 18-35 лет с эмоциональными трудностями</p>
+                  </Card>
+
+                  <Card className="p-6 bg-gradient-to-br from-pink-50 to-white border-2 border-primary/20 hover:border-primary/50 transition-all hover-scale text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-secondary to-secondary/70 flex items-center justify-center shadow-lg">
+                      <Icon name="Palette" className="text-primary" size={28} />
+                    </div>
+                    <h5 className="font-bold text-primary mb-2">Дизайн</h5>
+                    <p className="text-xs text-foreground/70">Успокаивающие цвета и дружелюбный интерфейс</p>
+                  </Card>
+
+                  <Card className="p-6 bg-gradient-to-br from-orange-50 to-white border-2 border-primary/20 hover:border-primary/50 transition-all hover-scale text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-500 flex items-center justify-center shadow-lg">
+                      <Icon name="Smartphone" className="text-white" size={28} />
+                    </div>
+                    <h5 className="font-bold text-primary mb-2">Платформа</h5>
+                    <p className="text-xs text-foreground/70">Мобильное приложение iOS и Android</p>
+                  </Card>
+
+                  <Card className="p-6 bg-gradient-to-br from-purple-50 to-white border-2 border-primary/20 hover:border-primary/50 transition-all hover-scale text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/70 to-secondary flex items-center justify-center shadow-lg">
+                      <Icon name="Target" className="text-white" size={28} />
+                    </div>
+                    <h5 className="font-bold text-primary mb-2">Миссия</h5>
+                    <p className="text-xs text-foreground/70">Сделать психологическую помощь доступной</p>
+                  </Card>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-4 right-4 opacity-20">
+              <Icon name="Network" className="text-primary" size={120} />
+            </div>
+          </div>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
+            <Card className="p-6 bg-white/90 backdrop-blur-sm border-2 border-primary/20 shadow-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-primary text-white p-2 rounded-lg">
+                  <Icon name="Lightbulb" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-primary">Ключевые идеи</h3>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+                  <p className="text-foreground/80">Эмоции — это нормально, их нужно слышать и принимать</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-1.5"></div>
+                  <p className="text-foreground/80">Психологическая помощь должна быть доступной и анонимной</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-2 h-2 rounded-full bg-orange-500 mt-1.5"></div>
+                  <p className="text-foreground/80">Технологии могут помочь в работе с эмоциональным состоянием</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 bg-white/90 backdrop-blur-sm border-2 border-primary/20 shadow-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-secondary text-primary p-2 rounded-lg">
+                  <Icon name="Rocket" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-primary">Будущее проекта</h3>
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-1.5"></div>
+                  <p className="text-foreground/80">Интеграция с носимыми устройствами для отслеживания состояния</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-2 h-2 rounded-full bg-secondary mt-1.5"></div>
+                  <p className="text-foreground/80">ИИ-помощник для персонализированных рекомендаций</p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <div className="w-2 h-2 rounded-full bg-orange-500 mt-1.5"></div>
+                  <p className="text-foreground/80">Сообщество поддержки и групповые сессии</p>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
     </div>
